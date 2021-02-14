@@ -1,5 +1,5 @@
 /* File: matrix_static.c */
-#include "matrix.h"
+#include "matrix_static.h"
 
 matrix create_empty(int rdim, int cdim)
 {
