@@ -52,8 +52,8 @@ void destroy(matrix m)
 {
  	 int i;
  	 for (i=0; i<m.row_dim; i++)
- 	   free(m.element[i]);
- 	 free(m.element);
+ 	  free(m.element[i]);
+ 	  free(m.element);
 	  free(&m);
 }
 
@@ -151,13 +151,15 @@ void equate(matrix* m1, matrix* m2)
 matrix transpose(matrix m){
 
 	  int i,j;
-	  printf("\n");
-	  for(i=0; i<m.row_dim; ++i){
-	  	printf("\n");
+	  matrix result;
+	  result = create_empty(m.row_dim, m.col_dim);
+	  for(i=0; i<m.row_dim; ++i)
 		for(j=0; j<m.col_dim; ++j)
-			printf("%d", (int)m.element[i][j]);
-	  }
-	  printf("\n");
+			result.element[j][i] = m.element[i][j];
+	  return result;
+			
+	  
+	  
 
 }
 
@@ -171,4 +173,16 @@ matrix create_custom_Matrix(int row_dim, int col_dim){
 			scanf("%lf", &result.element[i][j]);
 	return result;
 
+}
+
+void matrix_print_integer(matrix m){
+
+	int i,j;
+	printf("\n");
+	for(i=0; i<m.row_dim;++i){
+		printf("\n");
+		for(j=0;j<m.col_dim;++j)
+			printf("%d", (int)m.element[i][j]);
+	}
+	printf("\n");
 }

@@ -21,7 +21,7 @@ int main()
 	   matrix_print_integer(transpose(b));
 
 	   printf("\n Enter amount of rows \n");
-	   sanf("%d", &custom_Matrix.row_dim);
+	   scanf("%d", &custom_Matrix.row_dim);
 
 	   printf("\n Enter amount of columns \n");
 	   scanf("%d", &custom_Matrix.col_dim);
@@ -32,7 +32,7 @@ int main()
 	   matrix_print_integer(custom_Matrix);
 
 	   printf("Transposed Custom Matrix");
-	   matrix_print_integer(transpose(custom_Matrix);
+	   matrix_print_integer(transpose(custom_Matrix));
 
 
 }
