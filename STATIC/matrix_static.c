@@ -136,12 +136,12 @@ void equate(matrix* m1, matrix* m2)
 
 matrix transpose(matrix m) {
 	int i,j;
-	matrix reslult;
+	matrix result;
 	result = create_empty(m.row_dim, m.col_dim);
 	for(i=0; i<m.row_dim; ++i)
 		for(j=0; j<m.col_dim; ++j)
 			result.element[j][i] = m.element[i][j];
-	return restult;
+	return result;
 
 }
 
@@ -149,22 +149,22 @@ void matrix_print_integer(matrix m)
 {	
 	int i,j;
 	printf("\n");
-	for(i=0; i<m.row_dim: ++i){
+	for(i=0; i<m.row_dim;++i){
 		printf("\n");
 		for(j=0; j<m.col_dim; ++j)
-			print("%d",(int)m.element[i][j]);
+			printf("%d",(int)m.element[i][j]);
 		}
 	printf("\n");
 }
 
-matrix custom_Matrix(int row_dim, int col_dim){
+matrix create_custom_Matrix(int row_dim, int col_dim){
 	
 	int i,j;
 	matrix result;
-	restult.row_dim = row_dim;
-	result.row_col = col_dim;
+	result.row_dim = row_dim;
+	result.col_dim = col_dim;
 	for(i=0; i<row_dim; ++i)
 		for(j=0; j<col_dim;++j)
-			scanf("%f", &result.element[i][j]);
+			scanf("%lf", &result.element[i][j]);
 	return result;
 }
