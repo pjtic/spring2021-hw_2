@@ -1,5 +1,5 @@
 
-nclude "matrix.h"
+#include "matrix_static.h"
 
 int main() 
 {
