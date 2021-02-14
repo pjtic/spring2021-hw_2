@@ -29,6 +29,9 @@ matrix subtract(matrix, matrix);
 matrix negate(matrix);
 matrix multiply(matrix, matrix);
 matrix scalar_multiply(T scalar, matrix);
-/* remaining function prototypes not shown */
+matrix transpose(matrix m);
+void matrix_print_integer(matrix.m);
+matrix create_custom_Matrix(int row_dim, int col_dim);
+
 
 #endif
